@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portofoilo</title>
+</head>
+<body>
+    <div class="service" id="web">
+        <div class="max-width">
+            <h1>Web Development</h1>
+            <div class="content">
+                <a href="https://anasramadan098.github.io/anasdeveloper/pages/Portofoilo/Coding/index.html">
+                    <div class="card fw">
+                        <div class="box">
+                            <i class="fa-solid fa-folder"></i>
+                            <h3> Coding (HTML , CSS , JAVASCRIPT)</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://anasramadan098.github.io/anasdeveloper/pages/Portofoilo/Wix/index.html">
+                    <div class="card">
+                        <div class="box">
+                            <i class="fa-solid fa-folder"></i>
+                            <h3>Wix</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://anasramadan098.github.io/anasdeveloper/pages/Portofoilo/Webflow/index.html">
+                    <div class="card">
+                        <div class="box">
+                            <i class="fa-solid fa-folder"></i>
+                            <h3>WebFlow</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://anasramadan098.github.io/anasdeveloper/pages/Portofoilo/Wordpress/index.html">
+                    <div class="card">
+                        <div class="box">
+                            <i class="fa-solid fa-folder"></i>
+                            <h3>WordPress</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="service" id="photo">
+        <div class="max-width">
+            <h1>Graphic Design</h1>
+            <div class="content full">
+                <a href="https://anasramadan098.github.io/anasdeveloper/pages/Portofoilo/Graphic-Design/index.html">
+                    <div class="card full">
+                        <div class="box">
+                            <i class="fa-solid fa-folder"></i>
+                            <h3> Graphic Design </h3>
+                        </div>
+                    </div>
+                </a>
+       </div>
+    </div>
+   </div>             
+    <div class="service" id="video">
+        <div class="max-width">
+            <h1>Video Edit</h1>
+        </div>
+            <div class="content full">
+                <a href="https://anasramadan098.github.io/anasdeveloper/pages/Portofoilo/Video-Edit/index.html">
+                    <div class="card">
+                        <div class="box">
+                            <i class="fa-solid fa-folder"></i>
+                            <h3>Video Edit</h3>
+                        </div>
+                    </div>
+                </a>
+       </div>
+   </div>     
+           <!--  Start Menu -->
+           <div class="menu-parent">
+            <ul>
+                <a href="#web"><li style="--i:4;">Web Devlopment</li></a>
+                <a href="#photo"><li style="--i:3;">Graphic Design</li></a>
+                <a href="#video"><li style="--i:2;">Video Edit</li></a>
+                
+            </ul>
+        </div>
+           <!--  End Menu -->
+           <div class="logo">
+               Anas
+           </div>
+           <!-- JavAsCRIPT -->
+           <script>
+               let links = document.querySelectorAll(".menu-parent li");
+                let linksArray = Array.from(links);
+
+               linksArray.forEach((ele) => {
+  ele.addEventListener("click", function (e) {
+    // console.log(ele);
+    linksArray.forEach((ele) => {
+      ele.classList.remove("active");
+    });
+    e.currentTarget.classList.add("active");
+  });
+});
+           </script>
+</body>
+</html>

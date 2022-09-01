@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="text">
+        <h2>
+            <span>Contact</span>
+            <span>Me</span>
+        </h2>
+    </div>
+    <div class="container">
+        <div class="energy">
+            <span style="--clr:#fbad04;--i:18px;--d:2.5s;">g</span>
+            <span style="--clr:#03a1d9;--i:13px;--d:5s;"></span>
+            <span style="--clr:#f70364;--i:15px;--d:7.5s;"></span>
+            <span style="--clr:#93ff16;--i:20px;--d:10s;"></span>
+        </div>
+        <form action="maill.php">
+            <h1>Not Working Yet !!</h1>
+            <input type="text" name="name"  id="name" required placeholder="Your Name">
+            <input type="email" name="email"  id="email" required placeholder="Your Email">
+            <input type="text" name="phnumber" id="phnumber"  placeholder="Your Phone Number">
+            <input type="number" name="number" id="number" required placeholder="Your Budget With Dollar">
+            <textarea  id="message" name="message" rows="2" placeholder="What Is The Service That You Want ?"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script>
+        let overlay = document.querySelector(".text");
+        setTimeout(function( ) {
+            overlay.style.opacity = "0"           
+            overlay.style.display = "none"           
+        },4000)
+    </script>
+</body>
+</html>
