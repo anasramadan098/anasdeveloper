@@ -15,9 +15,7 @@ body {
     padding: 100px 0;
 }
 .max-width {
-    max-width: 1300px;
     padding: 0 45px;
-    margin: auto;
 }
 .max-width h1 {
     font-size: 40px;
@@ -50,9 +48,9 @@ body {
     z-index: 1100;
 }
  .content {
-    display: grid; 
-    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
-    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
  .content .card {
     padding: 50px 25px;
@@ -63,7 +61,7 @@ body {
     cursor: pointer;
     transition: all .5s;
     position: relative;
-    margin-bottom: 20px;
+    margin: 20px;
 }
  .content .card::before {
     content: "";
@@ -124,11 +122,6 @@ body {
 }
  .content .card .box p {
     line-height: 1.5;
-}
-.full {
-    grid-template-columns: 1fr;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 /* Start Menu */
 .menu-parent {
