@@ -4,16 +4,18 @@
     box-sizing: border-box;
 }
 .parent {
-    min-height: 100vh;
     background: linear-gradient(40deg , #fbda61 , #ff5acd);
     padding-top: 100px;
     padding-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     width: 100%;
 }
 div.main {
     background: #eee;
     width: 300px;
-    height: 160px;
+    height: 190px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -23,7 +25,31 @@ div.main {
     box-shadow: -1px 1px 15px 1px #777;
     transition: .3s;
     transition-delay: .2s;
-    z-index: 2;
+    margin-bottom: 40px;
+    animation: height 1.3s linear 1;
+}
+div.main:nth-child(1) {
+    animation-delay: 1s;
+}
+div.main:nth-child(2) {
+    animation-delay: 4s;
+}
+div.main:nth-child(3) {
+    animation-delay: 2.5s;
+}
+div.main:nth-child(4) {
+    animation-delay: 4.5;
+}
+@keyframes height {
+    0% {
+        height: 190px;
+    }
+    50% {
+        height: 175px;
+    }
+    100% {
+        height: 190px;
+    }
 }
 div img {
     max-width: 50%;
@@ -33,6 +59,31 @@ div img {
     transition: .3s;
     left: 50%;
     transform: translateX(-50%);
+    height: 100px;
+    animation: imgAnimate 1.3s linear 1;
+}
+.one {
+    animation-delay: 1s;
+}
+.sec {
+    animation-delay: 4s;
+}
+.th {
+    animation-delay: 2.5s;
+}
+.fr {
+    animation-delay: 4.5s;
+}
+@keyframes imgAnimate {
+    0% {
+        top: -15px;
+    }
+    50% {
+        top: -50px;
+    }
+    100% {
+        top: -15px;
+    }
 }
 div h3 {
     font-size: 20px;
@@ -49,6 +100,8 @@ div p a {
     transition: .3s;
     transition-delay: .1s;
     text-align: center;
+    margin-top: 10px;
+    animation: textAnimate 1.3s linear 1;
 }
 .main:hover img {
     top: -50px;
@@ -57,27 +110,30 @@ div p a {
     padding-top: 70px;
 }
 .main:hover {
-    height: 150px!important;
+    height: 180px!important;
 }
-.full-website::after {
-    content: "Full Responsive Website";
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    background: rgb(0 0 0 / 50%);
-    font-size: 3em;
-    color: #009688;
-    font-family: fantasy;
-    border-radius: 15px;
-    padding: 5px 10px;
-    width: fit-content;
-    font-style: italic;
-    z-index: 1;
+.text-card:nth-child(1) {
+    animation-delay: 1s;
 }
-.full-website {
-    display: flex;
-    gap: 20px;
+.text-card:nth-child(2) {
+    animation-delay: 4s;
+}
+.text-card:nth-child(3) {
+    animation-delay: 2.5s;
+}
+.text-card:nth-child(4) {
+    animation-delay: 4.5s;
+}
+@keyframes textAnimate {
+    0% {
+        padding-top: 100px;
+    }
+    50% {
+        padding-top: 70px;
+    }
+    100% {
+        padding-top: 100px;
+    }
 }
 .d-flex {
     display: flex;
@@ -100,9 +156,6 @@ div p a {
 .d-flex:hover::after {
     background-color: #777;
     bottom: -25px;
-}
-#joker {
-    font-size: 16px;
 }
 @media (max-width:767px) {
     .d-flex {
